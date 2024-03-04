@@ -6,13 +6,11 @@ const nb_nav = 5;
 function hideNavbar() {
 	// main_nav.style.position = 'absolute';
 	main_nav.style.marginLeft = '-400px';
-	// main_nav.style.zIndex = '-100';
 }
 
 function displayNavbar() {
 	main_nav.style.marginLeft = '10px';
 	// main_nav.style.position = 'relative';
-	// main_nav.style.zIndex = '100';
 }
 
 menuItems.forEach((item) => {
