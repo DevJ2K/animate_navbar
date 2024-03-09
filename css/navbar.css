@@ -1,5 +1,6 @@
 :root {
-	--nav-selected-color: rgb(67, 233, 255);
+	/* --nav-selected-color: rgb(127, 0, 147); */
+	--nav-selected-color: rgb(0, 225, 255);
 	--block-one-color: #e93eff4d;
 	--block-two-color: rgba(82, 47, 255, 0.499);
 	/* -- */
@@ -34,27 +35,7 @@
 	overflow: auto;
   }
 
-  .main-container {
-	flex-direction: row;
-	display: flex;
-	width: 90vw;
-	height: 90vh;
-	margin: 5vh auto;
-	min-height: 665px;
-	min-width: 750px;
-
-	background: rgba(0, 0, 0, 0.379);
-
-	-webkit-box-shadow: 2px 2px 22px 3px rgba(0,0,0,0.55);
-	-moz-box-shadow: 2px 2px 22px 3px rgba(0,0,0,0.55);
-	box-shadow: 2px 2px 22px 3px rgba(0,0,0,0.55);
-
-	backdrop-filter: blur(5px);
-	-webkit-backdrop-filter: blur(5px);
-	border: 1px outset rgba(149, 0, 255, 0.435);
-	border-radius: 24px;
-  }
-
+  /* Background Blur effects and block */
   .blur-cover {
 	top: 0;
 	left: 0;
@@ -97,6 +78,30 @@
 	right: 0;
 	bottom: 0;
   }
+
+
+
+  .main-container {
+	flex-direction: row;
+	display: flex;
+	width: 90vw;
+	height: 90vh;
+	margin: 5vh auto;
+	min-height: 665px;
+	min-width: 750px;
+
+	background: rgba(0, 0, 0, 0.379);
+
+	-webkit-box-shadow: 2px 2px 22px 3px rgba(0,0,0,0.55);
+	-moz-box-shadow: 2px 2px 22px 3px rgba(0,0,0,0.55);
+	box-shadow: 2px 2px 22px 3px rgba(0,0,0,0.55);
+
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 1px outset rgba(149, 0, 255, 0.435);
+	border-radius: 24px;
+  }
+
   /* BARRE DE NAVIGATION */
 
 
@@ -122,8 +127,16 @@
 	/* margin-bottom: 10px; */
 	margin-left: 10px;
 
-	/* -webkit-box-shadow: 10px 10px 5px -5px rgba(173,173,173,1); */
-	/* -moz-box-shadow: 10px 10px 5px -5px rgba(173,173,173,1); */
+	/* From https://css.glass */
+	background: rgba(62, 0, 77, 0.27);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5.9px);
+	-webkit-backdrop-filter: blur(5.9px);
+	border: 1px solid rgba(255, 255, 255, 0.65);
+
+	-webkit-box-shadow: 10px 10px 5px -5px rgba(173,173,173,1);
+	-moz-box-shadow: 10px 10px 5px -5px rgba(173,173,173,1);
 	box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.184);
   }
 
@@ -152,15 +165,15 @@
 
 	border-radius: 24px;
 
-	background: rgba(255, 166, 255, 0.393);
+	background: rgb(48, 0, 48);
 	backdrop-filter: blur(5.4px);
 	-webkit-backdrop-filter: blur(5.4px);
-	border: 3px solid var(--nav-selected-color);
+	border: 1px solid var(--nav-selected-color);
 	border-style: outset;
 
-	-webkit-box-shadow: 10px 10px 24px -12px rgba(255,255,255,0.39);
-	-moz-box-shadow: 10px 10px 24px -12px rgba(255,255,255,0.39);
-	box-shadow: 10px 10px 24px -12px rgba(255,255,255,0.39);
+	-webkit-box-shadow: 10px 10px 24px -12px rgba(6, 0, 0, 0.39);
+	-moz-box-shadow: 10px 10px 24px -12px rgba(6, 0, 0, 0.39);
+	box-shadow: 10px 10px 24px -12px rgba(6, 0, 0, 0.39);
 
 	height: 74px;
 	width: 74px;
@@ -169,17 +182,20 @@
   }
 
   .menu-item i {
+	opacity: 0.4;
 	font-size: 24px;
 	margin-bottom: 8px;
 	transition: .5s;
   }
 
   .menu-item span {
+	opacity: 0.4;
 	font-size: 16px;
 	transition: .5s;
   }
 
   .item-active span, .item-active i {
+	opacity: 1;
 	color: var(--nav-selected-color);
   }
 
@@ -190,7 +206,7 @@
   /* Bouton deconnexion */
   .fa-right-from-bracket {
 	border: 2px dashed rgba(255, 0, 0, 0.342);
-	background-color: #570080;
+	/* background-color: #570080; */
 	color: rgba(255, 0, 0, 0.342);
 	/* border: none; */
 	padding: 10px 20px;
