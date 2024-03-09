@@ -40,27 +40,36 @@
 		<div id="root" class="main-container">
 			<nav id="main_nav" class="vertical-menu">
 				<div id="selector-box"></div>
-				<div class="menu-item n-1" id="nav-route" onclick="urlRoute('/home')">
+
+
+				<div class="menu-item n-1 item-active" id="nav-route" onclick="urlRoute('/')">
 					<i class="fas fa-home"></i>
 					<span>Home</span>
 				</div>
-				<div class="menu-item n-2" id="nav-route-game" onclick="urlRoute('/game')">
+				<div class="menu-item n-2" id="nav-route-game" onclick="urlRoute('/')">
 					<i class="fas fa-gamepad"></i>
 					<span>Game</span>
 				</div>
-				<div class="menu-item n-3" id="nav-route" onclick="urlRoute('/top')">
+				<div class="menu-item n-3" id="nav-route-game" onclick="urlRoute('/')">
+					<i class="fas fa-trophy"></i>
+					<span>Tournament</span>
+				</div>
+				<div class="menu-item n-4" id="nav-route" onclick="urlRoute('/')">
 					<i class="fas fa-chart-bar"></i>
 					<span>Top</span>
 				</div>
-				<div class="menu-item n-4" id="nav-route" onclick="urlRoute('/profile')">
+				<div class="menu-item n-5" id="nav-route" onclick="urlRoute('/')">
 					<i class="fas fa-user"></i>
 					<span>Profile</span>
 				</div>
-				<div class="menu-item n-5" id="nav-route" onclick="urlRoute('/settings')">
+				<div class="menu-item n-6" id="nav-route" onclick="urlRoute('/')">
 					<i class="fas fa-cog"></i>
 					<span>Settings</span>
 				</div>
-				<div class="fa-solid fa-right-from-bracket" id="nav-route" onclick="urlRoute('/')"></div>
+
+				<div id="deconnexion-button">
+					<div class="fa-solid fa-right-from-bracket" id="nav-route" onclick="urlRoute('/')"></div>
+				</div>
 			</nav>
 		<div id="content" class="container">
 
