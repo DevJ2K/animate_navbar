@@ -1,5 +1,8 @@
 :root {
 	--nav-selected-color: rgb(67, 233, 255);
+	--block-one-color: #e93eff4d;
+	--block-two-color: rgba(82, 47, 255, 0.499);
+	/* -- */
 }
 /* @keyframes color {
 	0%   { background: #D700EA; }
@@ -20,7 +23,8 @@
 	/* font-family: Arial, sans-serif; */
 	font-family: 'Poppins', sans-serif;
 	/* background-color: #D700EA; */
-	background-color: #D700EA;
+	background-color: #20013d;
+
 	min-height: 100vh;
 	min-width: 600px;
 	display: flex;
@@ -31,19 +35,67 @@
   }
 
   .main-container {
-	/* position: relative; */
 	flex-direction: row;
 	display: flex;
 	width: 90vw;
 	height: 90vh;
 	margin: 5vh auto;
-	background-color: #420061;
-	border-radius: 30px;
 	min-height: 665px;
 	min-width: 750px;
-	-webkit-box-shadow: 2px 2px 22px 8px rgba(122,20,122,1);
-	-moz-box-shadow: 2px 2px 22px 8px rgba(122,20,122,1);
-	box-shadow: 2px 2px 22px 8px rgba(122,20,122,1);
+
+	background: rgba(0, 0, 0, 0.379);
+
+	-webkit-box-shadow: 2px 2px 22px 3px rgba(0,0,0,0.55);
+	-moz-box-shadow: 2px 2px 22px 3px rgba(0,0,0,0.55);
+	box-shadow: 2px 2px 22px 3px rgba(0,0,0,0.55);
+
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 1px outset rgba(149, 0, 255, 0.435);
+	border-radius: 24px;
+  }
+
+  .blur-cover {
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	backdrop-filter: blur(5vw);
+	z-index: 0;
+	/* background-color: red; */
+
+  }
+  .bg-block {
+	background: rgba(255, 255, 255, .3);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border-radius: 10px;
+	border-radius: 50%;
+	border-left: 1px solid rgba(255, 255, 255, .3);
+	border-top: 1px solid rgba(255, 255, 255, .3);
+	box-shadow: 10px 10px 60px -8px rgba(0,0,0,0.2);
+	position: absolute;
+	transition: all 0.2s ease;
+	z-index: -1;
+  }
+
+  .block-1 {
+	background: var(--block-one-color);
+	height: 30vh; width: 30vh;
+	/* height: 380px; width: 380px; */
+	/* top: 0px; left: 150px; */
+	top: 0;
+	left: 0;
+  }
+
+  .block-2 {
+	background: var(--block-two-color);
+	height: 30vh; width: 30vh;
+	/* height: 380px; width: 380px; */
+	/* bottom: 75px; right: 75px; */
+	right: 0;
+	bottom: 0;
   }
   /* BARRE DE NAVIGATION */
 
