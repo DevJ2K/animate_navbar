@@ -2,16 +2,44 @@ var selector_box = document.getElementById("selector-box");
 var main_nav = document.getElementById("main_nav");
 const menuItems = document.querySelectorAll('.menu-item');
 
+function end_animation() {
+	console.log("end");
+}
+
+function hideNavItems() {
+	for (let i = 0; i < menuItems.length; i++) {
+		// menuItems[i].style.display = 'none';
+		menuItems[i].hidden = true;
+	}
+}
+
+function showNavItems() {
+	for (let i = 0; i < menuItems.length; i++) {
+		// menuItems[i].style.display = 'flex';
+		menuItems[i].hidden = false;
+	}
+}
+
+
+
 function hideNavbar() {
-	// main_nav.style.position = 'absolute';
-	// main_nav.style.marginLeft = '-400px';
+	main_nav.style.width = '0px';
 	main_nav.style.opacity = '0';
+
+	main_nav.addEventListener('transitionend', function transitionEnd(event) {
+		if (event.propertyName === 'opacity') {
+			if (main_nav.style.opacity == '0') {
+				hideNavItems();
+			}
+			main_nav.removeEventListener('transitionend', transitionEnd);
+		}
+	});
 }
 
 function displayNavbar() {
-	main_nav.style.marginLeft = '10px';
+	showNavItems();
+	main_nav.style.width = '120px';
 	main_nav.style.opacity = '1';
-	// main_nav.style.position = 'relative';
 }
 
 menuItems.forEach((item) => {

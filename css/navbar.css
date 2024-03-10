@@ -1,6 +1,6 @@
 :root {
-	/* --nav-selected-color: rgb(127, 0, 147); */
 	--nav-selected-color: rgb(0, 225, 255);
+	/* --nav-selected-color: rgb(255, 217, 0); */
 	--block-one-color: #e93eff4d;
 	--block-two-color: rgba(82, 47, 255, 0.499);
 	/* -- */
@@ -87,7 +87,7 @@
 	width: 90vw;
 	height: 90vh;
 	margin: 5vh auto;
-	min-height: 665px;
+	min-height: 675px;
 	min-width: 750px;
 
 	background: rgba(0, 0, 0, 0.379);
@@ -106,11 +106,11 @@
 
 
   .vertical-menu {
-	position: absolute;
+	position: relative;
 	background-color: #570080;
-	width: 90px;
-	height: 88vh;
-	min-height: 645px;
+	width: 120px;
+	height: 90vh;
+	min-height: 675px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -119,25 +119,28 @@
 	border-top-left-radius: 30px;
 	border-bottom-left-radius: 30px;
 
-	border: 1px solid white;
-	border-style: outset;
+	transition: .5s;
 
-	margin-top: 1vh;
-	margin-right: 0px;
+	/* border: 1px solid white; */
+	/* border-style: outset; */
+
+	/* margin-top: 1vh; */
+	/* margin-right: 0px; */
 	/* margin-bottom: 10px; */
-	margin-left: 10px;
+	/* margin-left: 10px; */
 
-	/* From https://css.glass */
-	background: rgba(62, 0, 77, 0.27);
-	border-radius: 16px;
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-	backdrop-filter: blur(5.9px);
-	-webkit-backdrop-filter: blur(5.9px);
-	border: 1px solid rgba(255, 255, 255, 0.65);
+	/* left: 0; */
 
-	-webkit-box-shadow: 10px 10px 5px -5px rgba(173,173,173,1);
-	-moz-box-shadow: 10px 10px 5px -5px rgba(173,173,173,1);
-	box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.184);
+	background: rgba(0, 0, 0, 0.294);
+
+	-webkit-box-shadow: 2px 2px 22px 3px rgba(0,0,0,0.55);
+	-moz-box-shadow: 2px 2px 22px 3px rgba(0,0,0,0.55);
+	box-shadow: 2px 2px 22px 3px rgba(0,0,0,0.55);
+
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 1px outset rgba(149, 0, 255, 0.435);
+	border-radius: 24px;
   }
 
   .menu-item {
@@ -160,7 +163,7 @@
 	transition: .2s;
   }
 
-  #selector-box {
+  /* #selector-box {
 	position: absolute;
 
 	border-radius: 24px;
@@ -179,17 +182,41 @@
 	width: 74px;
 	z-index: 0;
 	transition: .5s;
+  } */
+  #selector-box {
+	position: absolute;
+
+	border-radius: 24px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+
+	background-color: var(--nav-selected-color);
+	/* background: rgb(48, 0, 48); */
+	backdrop-filter: blur(5.4px);
+	-webkit-backdrop-filter: blur(5.4px);
+	border: 1px solid var(--nav-selected-color);
+	border-style: outset;
+
+	/* -webkit-box-shadow: 10px 10px 24px -12px rgba(6, 0, 0, 0.39);
+	-moz-box-shadow: 10px 10px 24px -12px rgba(6, 0, 0, 0.39);
+	box-shadow: 10px 10px 24px -12px rgba(6, 0, 0, 0.39); */
+
+	height: 72px;
+	width: 4px;
+	left: 0;
+	z-index: 0;
+	transition: .5s;
   }
 
   .menu-item i {
-	opacity: 0.4;
+	opacity: 0.6;
 	font-size: 24px;
 	margin-bottom: 8px;
 	transition: .5s;
   }
 
   .menu-item span {
-	opacity: 0.4;
+	opacity: 0.6;
 	font-size: 16px;
 	transition: .5s;
   }
@@ -200,7 +227,7 @@
   }
 
   .n-3 span {
-	font-size: 11px;
+	font-size: 14px;
   }
 
   /* Bouton deconnexion */
@@ -223,5 +250,5 @@
 	transition: .3s;
 	border: 2px solid red;
 	color: red;
-	background-color: #6c2799;
+	background-color: rgb(0, 0, 0);
   }
