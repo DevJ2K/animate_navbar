@@ -1,8 +1,8 @@
 :root {
 	--nav-selected-color: rgb(0, 225, 255);
 	/* --nav-selected-color: rgb(255, 217, 0); */
-	--block-one-color: #e93eff4d;
-	--block-two-color: rgba(82, 47, 255, 0.499);
+	--block-one-color: #e83eff82;
+	--block-two-color: rgba(82, 47, 255, 0.679);
 	/* -- */
 }
 /* @keyframes color {
